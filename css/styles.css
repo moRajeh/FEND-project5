@@ -352,7 +352,7 @@ nav h1 a {
 }
 
 @media only screen and(max-width:420px) {
-    #restaurants-list {
+    * {
         display: grid;
         font-size: 3em;
         grid-template-columns: 1fr;
