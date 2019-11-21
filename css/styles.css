@@ -353,14 +353,8 @@ nav h1 a {
 
 @media only screen and(max-width:420px) {
     #restaurants-list {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    #other-half {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-auto-rows: 75px;
-        grid-gap: 10px;
+        font-size: 1.5em;
+        grid-template-columns: 1fr;
     }
 }
