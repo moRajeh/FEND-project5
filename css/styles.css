@@ -355,6 +355,6 @@ nav h1 a {
     * {
         display: grid;
         font-size: 3em;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
