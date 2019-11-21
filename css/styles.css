@@ -351,10 +351,9 @@ nav h1 a {
     color: #666;
 }
 
-@media only screen and(max-width:420px) {
-    * {
+@media only screen and (max-width:420px) {
+    #other-half {
         display: grid;
-        font-size: 6em;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 }
