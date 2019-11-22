@@ -2,18 +2,6 @@
 
 /* CSS Document */
 
-
-/* @media only screen and (max-width:420px) {
-    #restaurants-list {
-        display: grid;
-        grid-template-columns: repeat(1, 250px);
-        /* grid-gap: 30px; */
-
-
-/* }
-
-} */
-
 */ body,
 td,
 th,
@@ -369,4 +357,12 @@ nav h1 a {
 
 #restaurant-hours td {
     color: #666;
+}
+
+
+/* -------------------MY WORK-------------- */
+
+#restaurant-container {
+    display: flex;
+    flex-direction: column;
 }
