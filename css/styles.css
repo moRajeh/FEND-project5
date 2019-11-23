@@ -184,7 +184,7 @@ nav h1 a {
     letter-spacing: 0;
     margin: 10px;
     padding: 0 10px;
-    width: 200px;
+    width: 100%;
 }
 
 
@@ -278,6 +278,7 @@ nav h1 a {
 .inside #footer {
     bottom: 0;
     position: absolute;
+    max-width: 100%;
     width: 100%;
 }
 
@@ -349,6 +350,18 @@ nav h1 a {
     padding: 0 20px 20px;
     position: relative;
     width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#reviews-list li>p:nth-child(1) {
+    width: 50%;
+}
+
+#reviews-list li>p:nth-child(2) {
+    width: 50%;
+    text-align: right;
+    align-self: center;
 }
 
 #reviews-list li p {
@@ -359,10 +372,71 @@ nav h1 a {
     color: #666;
 }
 
-
-/* -------------------MY WORK-------------- */
-
 #restaurant-container {
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (max-width: 780px) {
+    .inside {
+        display: flex;
+        max-width: 100%;
+        width: 100%;
+    }
+    .inside header {
+        position: absolute;
+        order: 0;
+        width: 100%;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    header nav {
+        order: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    #breadcrumb {
+        order: 1;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        width: auto;
+    }
+    .inside #map-container {
+        order: 2;
+        display: flex;
+        /* 130px will put the map right under the breadcrumb */
+        top: 130px;
+        position: relative;
+        height: 300px;
+        width: 100%;
+    }
+    .inside #map-container #map {
+        width: 100%;
+    }
+    .inside #restaurant-container {
+        order: 3;
+        position: relative;
+        width: 100%;
+        padding: 140px 5px 0 0;
+        margin: auto;
+        text-align: center;
+    }
+    .inside #reviews-container {
+        width: auto;
+        margin: auto;
+    }
+    .inside #footer {
+        order: 4;
+        width: -webkit-fill-available;
+    }
+    #reviews-list {
+        width: auto;
+    }
+    #reviews-list li {
+        width: auto;
+    }
 }
