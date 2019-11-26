@@ -3,7 +3,10 @@
 /* CSS Document */
 
 
-/* to hide the skip-map any user other the keyboard user or screen reader */
+/* to hide the (skip-map <a>) to any user other the keyboard user or screen reader */
+
+
+/* got the way from : https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/ */
 
 a.skip-map {
     left: -999px;
