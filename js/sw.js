@@ -1,9 +1,16 @@
-if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('sw.js')
-        .then(() => {
-            console.log('Registerd service worker');
-        })
-        .catch(() => {
-            console.log('could not register a service worker');
-        });
-}
+self.addEventListener('install', function(event) {
+    event.waitUntil(
+        caches.open(cache)
+        .then(cache =>
+            cache.addAll(
+                [
+                    '/',
+                    '/img',
+                    '/js',
+                    '/css'
+                ]
+            )
+        )
+    );
+
+})
