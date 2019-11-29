@@ -1,17 +1,22 @@
 var myCachName = 'my-cache-v1';
+var urlsToCache = [
+    '/',
+    '/img',
+    '/js',
+    '/css'
+];
 
 self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open(myCachName)
-        .then(cache =>
-            cache.addAll[
-                '/',
-                '/img',
-                '/js',
-                '/css'
-            ])
-    )
+        .then(function(cache) {
+            console.log('a cache has been opend');
+            return cache.addAll(urlsToCache);
+        })
+    );
 });
+
+
 
 self.addEventListener('fetch', function(event) {
     event.respondWith(
